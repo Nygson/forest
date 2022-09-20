@@ -1,0 +1,116 @@
+.offer {
+    &__text {
+        text-align: center;
+        font-size: 1.8rem;
+        margin-bottom: 4rem;
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__card {
+        background-color: $white;
+        margin: 2rem 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2em;
+        border-radius: 5px;
+        box-shadow: 0 0 8px 0 rgba(0, 0, 0, .2);
+
+        &-list {
+            list-style-type: none;
+            font-size: 1.9rem;
+
+            &-item--has::before {
+                content: url(../img/icons/tabler-icon-check.svg);
+                margin-right: 0.5rem;
+            }
+
+            &-item--no-has {
+                opacity: 0.6;
+
+                &::before {
+                    content: url(../img/icons/tabler-icon-minus.svg);
+                    margin-right: 0.5rem;
+                }
+            }
+        }
+    }
+
+    &__card-heading {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+
+    &__card-price {
+        font-weight: 700;
+        font-size: 5rem;
+        margin: 1rem 0;
+    }
+
+    &__card-button {
+        margin-top: 1em;
+        padding: 0.5em 3em;
+        color: rgba(0, 0, 0, .6);
+        font-size: 2rem;
+        background-color: $white;
+        border: none;
+        box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, .6);
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    &__card-button--green {
+        background-color: #2cdc74;
+        box-shadow: 1px 4px 4px 0 rgb(44 220 116 / 60%);
+        color: $black;
+
+    }
+
+    &__btn-offers {
+        padding: 1rem 6rem;
+        border: none;
+        font-size: 2rem;
+        color: #fff;
+        cursor: pointer;
+        text-decoration: none;
+        display: block;
+        width: fit-content;
+        background-color: $darker-green;
+        margin: 0 auto;
+        margin-top: 4rem;
+    }
+
+}
+
+// Medium devices (tablets, 768px and up)
+
+@media (min-width: 768px) {
+
+    .offer {
+        &__text {
+            font-size: 2rem;
+        }
+
+        &__box {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &__card {
+            margin: 1rem;
+            min-width: 280px;
+            max-width: 280px;
+        }
+
+        &__card--margin {
+            margin: 1.5rem 1rem;
+        }
+    }
+}
